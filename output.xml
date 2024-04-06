@@ -1,27 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20240406 09:42:12.356" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20240406 10:03:10.351" rpa="false" schemaversion="4">
 <suite id="s1" name="Kreta" source="C:\Users\Tanar\Desktop\20240406\kreta.robot">
-<test id="s1-t1" name="Open Url" line="6">
+<test id="s1-t1" name="Open Url" line="7">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://telex.hu/</arg>
 <arg>Edge</arg>
 <arg>options=add_experimental_option("detach", True)</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240406 09:42:12.544" level="INFO">Opening browser 'Edge' to base url 'https://telex.hu/'.</msg>
-<status status="PASS" starttime="20240406 09:42:12.544" endtime="20240406 09:42:15.650"/>
+<msg timestamp="20240406 10:03:10.538" level="INFO">Opening browser 'Edge' to base url 'https://telex.hu/'.</msg>
+<status status="PASS" starttime="20240406 10:03:10.538" endtime="20240406 10:03:13.877"/>
 </kw>
-<status status="PASS" starttime="20240406 09:42:12.544" endtime="20240406 09:42:15.650"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elfogadGomb}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240406 10:03:13.878" endtime="20240406 10:03:14.140"/>
+</kw>
+<status status="PASS" starttime="20240406 10:03:10.538" endtime="20240406 10:03:14.141"/>
 </test>
-<status status="PASS" starttime="20240406 09:42:12.356" endtime="20240406 09:42:15.650"/>
+<test id="s1-t2" name="Privacy Accept" line="10">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${elfogadGomb}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240406 10:03:14.143" level="INFO">Clicking element 'xpath://*[@id="qc-cmp2-ui"]/div[2]/div/button[3]'.</msg>
+<status status="PASS" starttime="20240406 10:03:14.143" endtime="20240406 10:03:14.245"/>
+</kw>
+<status status="PASS" starttime="20240406 10:03:14.142" endtime="20240406 10:03:14.245"/>
+</test>
+<status status="PASS" starttime="20240406 10:03:10.351" endtime="20240406 10:03:14.245"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Kreta">Kreta</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Kreta">Kreta</stat>
 </suite>
 </statistics>
 <errors>
